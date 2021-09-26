@@ -11,6 +11,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private EditText txtNombre;
+    private EditText txtEdad;
     private Button btnHola;
 
     @Override
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Obtenemos una referencia a los controles de la interfaz
         txtNombre = (EditText)findViewById(R.id.TxtNombre);
+        txtEdad = (EditText)findViewById(R.id.TxtEdad);
         btnHola = (Button)findViewById(R.id.BtnHola);
     }
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         //Creamos la información a pasar entre actividades
         Bundle b = new Bundle();
         b.putString("NOMBRE", txtNombre.getText().toString());
+        b.putString("EDAD", txtEdad.getText().toString());
 
         //Añadimos la información al intent
         intent.putExtras(b);

@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class SaludoActivity extends AppCompatActivity {
 
     private TextView txtSaludo;
+    private TextView txtEdad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +17,12 @@ public class SaludoActivity extends AppCompatActivity {
 
         //Localizar los controles
         txtSaludo = (TextView)findViewById(R.id.TxtSaludo);
+        txtEdad = (TextView)findViewById(R.id.TxtEdad);
 
         //Recuperamos la información pasada en el intent
         Bundle bundle = this.getIntent().getExtras();
 
         //Construimos el mensaje a mostrar
-        txtSaludo.setText("Hola " + bundle.getString("NOMBRE"));
+        txtSaludo.setText("Hola " + bundle.getString("NOMBRE") + ", tienes " + bundle.getString("EDAD") + " años.");
     }
 }

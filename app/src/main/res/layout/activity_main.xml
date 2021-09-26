@@ -11,10 +11,29 @@
         android:id="@+id/LblNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nombre" />
+        android:text="@string/nombre"
+        android:gravity="center"
+        android:typeface="serif"
+        android:textColor="@android:color/holo_blue_dark"
+        />
 
     <EditText
         android:id="@+id/TxtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/LblEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escribe tu edad:"
+        android:gravity="center"
+        android:typeface="serif"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <EditText
+        android:id="@+id/TxtEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text" />
